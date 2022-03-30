@@ -49,7 +49,7 @@ def runTimer():
        totalMinutes, totalSeconds = divmod(clockTime, 60)
 
        totalHours = 0
-       if(totalMinutes > 60):
+       if totalMinutes > 60:
            totalHours, totalMinutes = divmod(totalMinutes, 60)
 # Stores the value up to two decimal places using the format() method
        hourString.set("{0:2d}".format(totalHours))
@@ -62,6 +62,7 @@ def runTimer():
 
        # When the timer hits zero this displays 10 images with 10 text
        if(clockTime == 0):
+           clockTime = 30
            number = random.randint(0, 9)
            if number == 0:
                test = label.config(image=pic)
@@ -103,16 +104,16 @@ setTimeButton.place(relx=0.5, rely=0.8, anchor=CENTER)
 
 # Variables for the pictures in the previous if statement
 picframe = Frame(clockWindow, bg="red").pack()
-pic = PhotoImage(file=r"D:\Downloads\Stretches\back_side stretch.PNG", height=200, width=300)
-pic2 = PhotoImage(file=r"D:\Downloads\Stretches\calf_stretch.PNG", height=200, width=300)
-pic3 = PhotoImage(file=r"D:\Downloads\Stretches\neck_exercise flex.PNG", height=200, width=300)
-pic4 = PhotoImage(file=r"D:\Downloads\Stretches\wrist_flex exercise.PNG", height=200, width=300)
-pic5 = PhotoImage(file=r"D:\Downloads\Stretches\overhead_shoulder stretch.PNG", height=200, width=300)
-pic6 = PhotoImage(file=r"D:\Downloads\Stretches\extending_finger stretch.PNG", height=200, width=300)
-pic7 = PhotoImage(file=r"D:\Downloads\Stretches\head_turns exercise.PNG", height=200, width=300)
-pic8 = PhotoImage(file=r"D:\Downloads\Stretches\hip stretches.PNG", height=200, width=300)
-pic9 = PhotoImage(file=r"D:\Downloads\Stretches\lower_back stretch.PNG", height=200, width=300)
-pic10 = PhotoImage(file=r"D:\Downloads\Stretches\shoulder_roll exercise.PNG",height=200, width=300)
+pic = PhotoImage(file=r"Stretches\back_side stretch.PNG", height=200, width=300)
+pic2 = PhotoImage(file=r"Stretches\calf_stretch.PNG", height=200, width=300)
+pic3 = PhotoImage(file=r"Stretches\neck_exercise flex.PNG", height=200, width=300)
+pic4 = PhotoImage(file=r"Stretches\wrist_flex exercise.PNG", height=200, width=300)
+pic5 = PhotoImage(file=r"Stretches\overhead_shoulder stretch.PNG", height=200, width=300)
+pic6 = PhotoImage(file=r"Stretches\extending_finger stretch.PNG", height=200, width=300)
+pic7 = PhotoImage(file=r"Stretches\head_turns exercise.PNG", height=200, width=300)
+pic8 = PhotoImage(file=r"Stretches\hip stretches.PNG", height=200, width=300)
+pic9 = PhotoImage(file=r"Stretches\lower_back stretch.PNG", height=200, width=300)
+pic10 = PhotoImage(file=r"Stretches\shoulder_roll exercise.PNG",height=200, width=300)
 
 # Defines Label for the background
 label = Label(picframe, background="steel blue")
@@ -120,4 +121,3 @@ label.pack()
 
 # Keeps looping
 clockWindow.mainloop()
-
